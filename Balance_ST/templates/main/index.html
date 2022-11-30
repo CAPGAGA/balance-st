@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="ru">
+{% load static %}
+  <head>
+   <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900&display=swap" rel="stylesheet">
+
+<!--    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css'%}">-->
+
+<!--    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">-->
+
+<!--    <link rel="stylesheet" href="{% static 'css/animate.css'%}">-->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+
+    <!-- Style -->
+    <style>
+        .overlay-div{
+           height:100%;
+           width: 100%;
+           position:absolute;
+           background-color:#000;
+           opacity:.6;
+            }
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+           background-color: #D93039;
+           }
+        .carousel-control-prev-icon {
+         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc272c' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+        }
+
+        .carousel-control-next-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc272c' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+        }
+        .form-check-input:checked {
+          background-color: #D93039;
+          border-color: #D93039;
+        }
+
+    </style>
+        <!--Sidebar-->
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+        <!--Table-->
+    <link rel="stylesheet" href="{% static 'css/table.css' %}">
+
+    <title>BalanceST</title>
+  </head>
+    <body style="padding-top : 0px; overflow-y: scroll;">
+      <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" style="position: fixed;">
+          <ul class="sidebar-nav" id="sidebarnav">
+            <li><a href="#services" class="sidelink">Услуги</a></li>
+            <li><a href="#tarifs" class="sidelink">Тарифы</a></li>
+            <li><a href="#reviews" class="sidelink">Отзывы</a></li>
+            <li><a href="#orderCall" class="sidelink">Заказать звонок</a></li>
+            <li><a href="#contacts" class="sidelink">Контакты</a></li>
+          </ul>
+        </div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar fixed-top" style="flex-wrap: nowrap; background-color: white; position:sticky">
+                <div class="container-fluid justify-content-start">
+                    <a href="#" class="btn" id="menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8Zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5Z"/>
+                    </svg>
+                </a>
+                </div>
+              <div class="container-fluid justify-content-end">
+                <div class="navbar-brand" style="display: flex; align-items: center;">
+                  Balance-ST
+                  <img src="{% static 'images/logo.jpg' %}" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+                </div>
+              </div>
+            </nav>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card text-white">
+                  <div class="overlay-div"></div>
+                   <img src="{% static 'images/header.jpg' %}" class="card-img" alt="Header"/>
+                    <div class="card-img-overlay d-flex flex-column align-items-start">
+                      <div class="m-auto">
+                        <h5 class="card-title text-center" style="font-size: 5vw; color: #fadbdd;">Бухгалтерское обслуживание в Москве и Краснодаре</h5>
+                      </div>
+                      <div class="header mx-auto mb-0">
+                          <p class="card-text text-center" style="font-size: 3vw;">
+                          Помогаем вести бухгалтерию и сдавать отчетность
+                          </p>
+                          <h2 class="text-center">
+                              <a href="#services-top" class="btn mx-auto" style="color: #fadbdd">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                              </a>
+                          </h2>
+                      </div>
+                  </div>
+                </div>
+                  <h2 class="text-center mt-5" id="services-top"> Наши услуги</h2>
+                  <div class="row justify-content-evenly my-5">
+                      <div class="col-sm-6">
+                        <div class="card my-1" style="background-color: #FDEDEE;border-width: 0px; border-color: #DC272C;">
+                          <div class="card-body mb-1">
+                            <h5 class="card-title text-center">Бухгалтерский аутсорсинг полный или частичный</h5>
+                            <p class="card-text text-center">Зависит от вида деятельности, специфики работы и пожеланий клиента (по договоренности).</p>
+                          </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-4 mx-5 my-2 d-flex justify-content-center">
+                                    <a href="#" class="btn btn-sm rounded-pill" style="background-color: #D93039;"><b>ПОДРОБНЕЕ</b></a>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="card my-1" style="border-width: 1px; border-color: #DC272C;">
+                          <div class="card-body mb-1">
+                            <h5 class="card-title text-center">Бухгалтерское сопровождение для тех, кто работает с маркетплейсами Wildberries, OZON</h5>
+                            <p class="card-text text-center">Совместная работа с клиентом, бухгалтерский и налоговый учет операций.</p>
+                          </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-4 mx-5 my-2 d-flex justify-content-center">
+                                    <a href="#" class="btn btn-sm rounded-pill" style="background-color: #D93039;"><b>ПОДРОБНЕЕ</b></a>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="card my-1" style="border-width: 1px; border-color: #DC272C;">
+                          <div class="card-body mb-1 justify-content-center">
+                            <h5 class="card-title text-center">Оптимизация налогов</h5>
+                            <p class="card-text text-center">Проконсультируем, просчитаем какая система налогообложения наиболее выгодна общая, УСН или патент</p>
+                          </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-4 mx-5 my-2 d-flex justify-content-center">
+                                    <a href="#" class="btn btn-sm rounded-pill" style="background-color: #D93039;"><b>ПОДРОБНЕЕ</b></a>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="card my-1" style="background-color: #FDEDEE; border-width: 0px; border-color: #DC272C;">
+                          <div class="card-body">
+                            <h5 class="card-title text-center">Свяжитесь со мной</h5>
+                            <form>
+                              <div class="row mb-1 justify-content-center">
+                                <div class="col-sm-12 my-1 mx-1">
+                                  <input type="text" class="form-control" id="inputName" placeholder="Имя" style="background-color: transparent; border-color: #A7797A;">
+                                </div>
+                              </div>
+                              <div class="row mb-1 justify-content-center">
+                                <div class="col-sm-12 my-1 mx-1">
+                                  <input type="Email" class="form-control" id="inputEmail" placeholder="Email" style="background-color: transparent; border-color: #A7797A;">
+                                </div>
+                              </div>
+                                <div class="row mb-1 justify-content-center">
+                                <div class="col-sm-12 my-1 mx-1">
+                                  <input type="text" class="form-control" id="inputPhone" placeholder="Телефон" style="background-color: transparent; border-color: #A7797A;">
+                                </div>
+                              </div>
+                                <div class="row mx-5 justify-content-center">
+                                    <a href="#" class="btn rounded-pill" style="background-color: #D93039;"><b>Отправить</b></a>
+                                </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  <div data-bs-spy="scroll" data-bs-target="#sidebarScroll" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy p-3 rounded-2" tabindex="0">
+                    <h4 id="services" class="text-center">Услуги</h4>
+                      <p>...</p>
+                    <h4 id="tarifs" class="text-center">Тарифы</h4>
+                      <ul class="nav nav-pills nav-justified" id="tableTab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill active" style="color: black;" id="organization-tab" data-bs-toggle="tab" data-bs-target="#organization-tab-pane" type="button" role="tab" aria-controls="organization-tab-pane" aria-selected="true">Для организаций</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill" style="color: black;" id="individual-tab" data-bs-toggle="tab" data-bs-target="#individual-tab-pane" type="button" role="tab" aria-controls="individual-tab-pane" aria-selected="true">Для индивидуальных предпринимателей</button>
+                          </li>
+                      </ul>
+                      <div class="tab-content" id="tableTabContent">
+                          <div class="tab-pane fade show active" id="organization-tab-pane" role="tabpanel" aria-labelledby="organization-tab" tabindex="0">
+                              <ul class="responsive-table">
+                                <li class="table-header">
+                                  <div class="col col-1">Количество документов*</div>
+                                  <div class="col col-2">ОСНО (руб.)</div>
+                                  <div class="col col-3">УСН 6% (руб.)</div>
+                                  <div class="col col-4">УСН 15% (руб.)</div>
+                                  <div class="col col-5">(Учет в у.е., разд. учет, НКО и т.д.) (руб.)</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">Нулевой баланс</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО (руб.)">3 500</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6% (руб.)">3 000</div>
+                                  <div class="col col-4 text-center" data-label="УСН 15% (руб.)">3 000</div>
+                                  <div class="col col-5 text-center" data-label="(Учет в у.е., разд. учет, НКО и т.д.) (руб.)">4 000</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">До 50</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО (руб.)">10 000</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6% (руб.)">7 000</div>
+                                  <div class="col col-4 text-center" data-label="УСН 15% (руб.)">8 000</div>
+                                  <div class="col col-5 text-center" data-label="(Учет в у.е., разд. учет, НКО и т.д.) (руб.)">12 000</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">От 50 до 100</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО (руб.)">18 000</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6% (руб.)">12 600</div>
+                                  <div class="col col-4 text-center" data-label="УСН 15% (руб.)">14 400</div>
+                                  <div class="col col-5 text-center" data-label="(Учет в у.е., разд. учет, НКО и т.д.) (руб.)">21 600</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">От 101 до 200</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО (руб.)">28 000</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6% (руб.)">19 600</div>
+                                  <div class="col col-4 text-center" data-label="УСН 15% (руб.)">22 400</div>
+                                  <div class="col col-5 text-center" data-label="(Учет в у.е., разд. учет, НКО и т.д.) (руб.)">33 600</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">От 201 до 300</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО (руб.)">35 000</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6% (руб.)">24 500</div>
+                                  <div class="col col-4 text-center" data-label="УСН 15% (руб.)">28 000</div>
+                                  <div class="col col-5 text-center" data-label="(Учет в у.е., разд. учет, НКО и т.д.) (руб.)">42 000</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">От 301 до 400</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО (руб.)">45 000</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6% (руб.)">31 500</div>
+                                  <div class="col col-4 text-center" data-label="УСН 15% (руб.)">36 000</div>
+                                  <div class="col col-5 text-center" data-label="(Учет в у.е., разд. учет, НКО и т.д.) (руб.)">54 000</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">От 401 до 600</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО (руб.)">55 000</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6% (руб.)">38 500</div>
+                                  <div class="col col-4 text-center" data-label="УСН 15% (руб.)">44 000</div>
+                                  <div class="col col-5 text-center" data-label="(Учет в у.е., разд. учет, НКО и т.д.) (руб.)">66 000</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">От 601 до 800</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО (руб.)">64 000</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6% (руб.)">44 800</div>
+                                  <div class="col col-4 text-center" data-label="УСН 15% (руб.)">51 200</div>
+                                  <div class="col col-5 text-center" data-label="(Учет в у.е., разд. учет, НКО и т.д.) (руб.)">76 800</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">От 801 до 1000</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО (руб.)">74 000</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6% (руб.)">51 800</div>
+                                  <div class="col col-4 text-center" data-label="УСН 15% (руб.)">59 200</div>
+                                  <div class="col col-5 text-center" data-label="(Учет в у.е., разд. учет, НКО и т.д.) (руб.)">88 800</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">Каждые 200 свыше 1001</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО (руб.)">15 000</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6% (руб.)">10 500</div>
+                                  <div class="col col-4 text-center" data-label="УСН 15% (руб.)">12 000</div>
+                                  <div class="col col-5 text-center" data-label="(Учет в у.е., разд. учет, НКО и т.д.) (руб.)">18 000</div>
+                                </li>
+
+                              </ul>
+                          </div>
+                          <div class="tab-pane fade" id="individual-tab-pane" role="tabpanel" aria-labelledby="individual-tab" tabindex="0">
+                              <ul class="responsive-table">
+                                <li class="table-header">
+                                  <div class="col col-1">Количество документов*</div>
+                                  <div class="col col-2">ОСНО, УСН 15% (руб.)</div>
+                                  <div class="col col-3">УСН 6%, Патент (руб.)</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">До 50</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО, УСН 15% (руб.)">8 000</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6%, Патент (руб.)">6 000</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">От 50 до 100</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО, УСН 15% (руб.)">14 400</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6%, Патент (руб.)">12 000</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">От 101 до 200</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО, УСН 15% (руб.)">22 400</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6%, Патент (руб.)">18 000</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">От 201 до 300</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО, УСН 15% (руб.)">28 000</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6%, Патент (руб.)">24 000</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">От 301 до 400</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО, УСН 15% (руб.)">36 000</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6%, Патент (руб.)">30 000</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">От 401 до 600</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО, УСН 15% (руб.)">44 000</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6%, Патент (руб.)">36 000</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">От 601 до 800</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО, УСН 15% (руб.)">51 200</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6%, Патент (руб.)">42 000</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">От 801 до 1000</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО, УСН 15% (руб.)">59 200</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6%, Патент (руб.)">48 000</div>
+                                </li>
+                                <li class="table-row">
+                                  <div class="col col-1" data-label="Количество документов*">Каждые 200 свыше 1001</div>
+                                  <div class="col col-2 text-center" data-label="ОСНО, УСН 15% (руб.)">12 000</div>
+                                  <div class="col col-3 text-center" data-label="УСН 6%, Патент (руб.)">9 000</div>
+                                </li>
+                              </ul>
+                          </div>
+                      </div>
+                    <div class="text-end" style="font-size: 11px;">*Обрабатываемых в квартал</div>
+                    <div class="text-end" style="font-size: 11px; margin-left: 25%;">**Перечень услуг и установленные тарифы не являются окончательными. Стоимость обслуживания определяется индивидуально и может корректироваться в зависимости от вида компании, специфики ее деятельности, оборотов и особенностей учета.</div>
+                    <h4 id="reviews" class="text-center" style="margin: 5%;">Отзывы</h4>
+                    <div class="container">
+                      <div id="myCarousel" class="carousel slide text-center" data-bs-ride="carousel">
+                        <div class="carousel-indicators justify-content-center" style="position: absolute;top: 100%;">
+                          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: #D93039;"></button>
+                          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: #D93039;"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="row row-eq-height d-flex justify-content-center">
+                              <div class="card-sm-7">
+                                <h5 class="mb-3">Елена Григоренко</h5>
+                                <p class="mb-3"><span>Генеральный директор</span> <span><a href="https://signum-market-access.com/">ООО “Сигнум Маркет Аксесс”</a></span></p>
+                                <p class="text-muted" style="font-size: 12px;">
+                                  Мои девочки! мои финансовые феи!
+                                  а ведь почти 12 лет прожито вместе...сколько всего было пройдено: страшные проверки налоговой, аудиты западных заказчиков...вам я доверяю самую главную часть своего бизнеса - свои деньги!
+                                  Иногда коллеги удивляются, как это я отдаю вам все пароли от банковских счетов? личные кабинеты налоговой? да вот так! я знаю, что кто угодно может подвести - только не вы! Вы будете работать в выходные, в праздники, но все отчеты будут сданы вовремя. Я ужасно неорганизованный клиент, я это знаю и всегда заранее прошу прощения, но никогда, НИКОГДА не слышала упреков от вас, а только слова поддержки и "не переживай, вырулим"!
+                                  Вы - единственные, кому я плачу за работу с удовольствием, чего и всем вашим другим клиентам желаю.
+                                  Наверное, кто-то скажет, что так не бывает, не может не быть минусов... и, пожалуй, да, такие минусы есть - мы редко видимся очно и одна из вас крайне несерьёзно относится к моим музыкальным заданиям))
+                                  Очень вас ценю,
+                                  Ваш самый неорганизованный клиент.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="row row-eq-height d-flex justify-content-center">
+                              <div class="card-sm-7">
+                                <h5 class="mb-3">Артем Шакирзянов</h5>
+                                <p><span>Генеральный директор </span><span><a href="https://log-house.ru/"> ООО “Л-Дом”</a></span></p>
+                                <p class="text-muted" style="font-size: 18px;">
+                                  <i class="fas fa-quote-left pe-2"></i>
+                                  Работаем с Татьяной и Севилей уже более 10 лет, всем довольны! Закрывают потребности по нескольким ООО и ИП! Если что-то непонятно - объяснят, подскажут. Если что-то не знаешь, проконсультируют. Если попадаешь в нестандартную ситуацию - разбираются и доводят дело до конца!
+                                  Сочетание клиентоориентированного отношения, грамотной работы и вполне адекватных цен на свои услуги! Спасибо, что вы есть! :)
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h4 id="orderCall" class="text-center" style="margin: 10%;">Заказать звонок</h4>
+                    <h3 class="text-center">Оставить заявку на бесплатную консультацию</h3>
+                    <div class="row justify-content-center">
+                      <div class="col-sm-8">
+                        <div class="card my-1" style="background-color: #FDEDEE; border-width: 0px; border-color: #DC272C;">
+                          <div class="card-body">
+                            <h5 class="card-title text-center">Свяжитесь со мной</h5>
+                            <form>
+                              <div class="row mb-1 justify-content-center">
+                                <div class="col-sm-12 my-1 mx-1">
+                                  <input type="text" class="form-control" id="inputName" placeholder="Имя" style="background-color: transparent; border-color: #A7797A;">
+                                </div>
+                              </div>
+                              <div class="row mb-1 justify-content-center">
+                                <div class="col-sm-12 my-1 mx-1">
+                                  <input type="Email" class="form-control" id="inputEmail" placeholder="Email" style="background-color: transparent; border-color: #A7797A;">
+                                </div>
+                              </div>
+                              <div class="row mb-1 justify-content-center">
+                                <div class="col-sm-12 my-1 mx-1">
+                                  <input type="text" class="form-control" id="inputPhone" placeholder="Телефон" style="background-color: transparent; border-color: #A7797A;">
+                                </div>
+                              </div>
+                              <div class="row mb-1 justify-content-center">
+                                <div class="col-sm-12 my-1 mx-1">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                      <a data-bs-toggle="modal" data-bs-target="#Modal" style="cursor: pointer;">
+                                        <ins>Согласие на обработку персональных данных</ins>
+                                      </a>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                                <div class="row mx-5 justify-content-center">
+                                    <a href="#" class="btn rounded-pill" style="background-color: #D93039;"><b>Отправить</b></a>
+                                </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                    <h4 id="contacts" class="text-center">Контакты</h4>
+                      <p>...</p>
+                  </div>
+                <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ModalLabel">Согласие на обработку персональных данных</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>
+                        Настоящим я, во исполнение требований Федерального закона от 27.07.2006 г. № 152-ФЗ «О
+                        персональных данных» (с изменениями и дополнениями) свободно, своей волей и своем интересе,
+                        а также подтверждая свою дееспособность, даю свое согласие Индивидуальному предпринимателю
+                        «Гнатнеко С.Т.» (ОГРНИП ...), место нахождения: Россия, Москвоская область,
+                        город Орехово-Зуево (далее – ИП), сайт ИП: https://www.balance-st.ru на обработку
+                        своих персональных данных со следующими условиям:
+                        </p>
+                        <ul>
+                          <li>
+                            Данное Согласие дается на обработку персональных данных, как без использования
+                            средств автоматизации, так и с их использованием. Согласие дается на обработку следующих
+                            моих персональных данных: фамилия, имя, отчество; номер телефона (домашний/ сотовый);
+                            электронная почта; пользовательские данные (сведения о местоположении, тип и версия ОС, тип и
+                            версия Браузера, тип устройства и разрешение его экрана; источник, откуда пришел на сайт
+                            пользователь; с какого сайта или по какой рекламе; язык ОС и Браузера; какие страницы открывает
+                            и на какие кнопки нажимает пользователь; ip-адрес); данные обо мне, которые станут известны в
+                            ходе исполнения договоров (в случае заключения договора между мной и ИП), а также
+                            иная общедоступная информация обо мне.
+                          </li>
+                          <li>
+                            Персональные данные не являются общедоступными.
+                          </li>
+                          <li>
+                            Цель обработки персональных данных: обработка входящих запросов физических лиц с
+                            целью оказания консультирования по различным вопросам, относящимся к сфере
+                            предпринимательской деятельности ИП; аналитики действий физического лица на вебсайте и функционирования веб-сайта.
+                          </li>
+                          <li>
+                            Основанием для обработки персональных данных является статья 24 Конституции
+                            Российской Федерации; статья 6 Федерального закона № 152-ФЗ «О персональных данных»;
+                            настоящее Согласие посетителя сайта на обработку персональных данных.
+                          </li>
+                          <li>
+                            В ходе обработки с персональными данными будут совершены следующие действия: сбор,
+                            запись, систематизация, накопление, хранение, уточнение (обновление, изменение), извлечение,
+                            использование, передача (распространение, предоставление, доступ), блокирование, удаление,
+                            уничтожение.
+                          </li>
+                          <li>
+                            Настоящим я уведомлен ИП, что предполагаемыми пользователями персональных
+                            данных являются работники ИП, а также лица, привлеченные ИП на условиях
+                            гражданско-правового договора.
+                          </li>
+                          <li>
+                            Я ознакомлен (а), что:
+                          </li>
+                          <ul>
+                            <li>
+                              настоящее Согласие на обработку моих персональных данных является бессрочным и
+                              может быть отозвано посредством направления мною в адрес ИП (142602 , Московская область,
+                              г. Орехово-Зуево, ул. Урицкого д. 6, кв. 6) письменного заявления. Датой отзыва
+                              считается день, следующий за днем вручения ИП письменного заявления об отзыве
+                              Согласия пользователя сайта на обработку персональных данных;
+                            </li>
+                            <li>
+                              имею право на доступ к моим персональным данным, требовать уточнения (обновление,
+                              изменение) моих персональных данных, а также удаления и уничтожения моих персональных
+                              данных в случае их обработки ИП, нарушающих мои законные права и интересы,
+                              законодательство Российской Федерации.
+                            </li>
+                            <li>
+                              в случае отзыва Согласия на обработку персональных данных ИП вправе
+                              продолжить обработку персональных данных без моего согласия при наличии оснований,
+                              указанных в пунктах 2.11 части 1 статьи 6, части 2 статьи 10 и части 2 статьи 11 Федерального
+                              закона №152-ФЗ «О персональных данных» от 27.07.2006 г
+                            </li>
+                          </ul>
+                          <li>
+                            Я обязуюсь в случае изменения моих персональных данных, сведений обо мне
+                            незамедлительно сообщить ИП, с предоставлением подтверждающих документов.
+                          </li>
+                          <li>
+                            Настоящим Согласием я подтверждаю, что являюсь субъектом предоставляемых
+                            персональных данных, а также подтверждаю достоверность предоставляемых данных.
+                          </li>
+                          <li>
+                            Настоящее Согласие действует все время до момента прекращения обработки
+                            персональных данных, согласно п. 7.1 Согласия.
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="{% static 'js/jquery-3.6.1.min.js'%}"></script>
+    <script src="{% static 'js/popper.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.js'%}"></script>
+    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+    <script src="{% static 'js/offcanvas.js'%}"></script>
+    <script src="{% static 'js/sidebar.js'%}"></script>
+  </body>
+</html>
