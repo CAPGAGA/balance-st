@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        position: relative;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #ccc;
+        position: absolute;
+      }
+      .oval {
+        width: 200px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container" class="container">
+    </div>
+    <script>
+      const container = document.getElementById('container');
+
+      // Create the main oval and add it to the container
+      const mainOval = document.createElement('div');
+      mainOval.classList.add('oval');
+      mainOval.innerHTML = 'Hello World';
+      container.appendChild(mainOval);
+
+      // Create 4 additional circles and add them to the container
+      for (let i = 0; i < 4; i++) {
+        const circle = document.createElement('div');
+        circle.classList.add('circle');
+        container.appendChild(circle);
+      }
+
+      // Position the circles around the main oval
+      const mainOvalRect = mainOval.getBoundingClientRect();
+      const mainOvalX = mainOvalRect.left + mainOvalRect.width / 2;
+      const mainOvalY = mainOvalRect.top + mainOvalRect.height / 2;
+      const circleRadius = mainOvalRect.width / 2 + 50; // Add some space between the circles
+
+      const circles = document.querySelectorAll('.circle');
+      for (let i = 0; i < circles.length; i++) {
+        const circle = circles[i];
+        const angle = (i / circles.length) * 360;
+        const x = mainOvalX + circleRadius * Math.cos(angle);
+        const y = mainOvalY + circleRadius * Math.sin(angle);
+
+        circle.style.left = `${x}px`;
+        circle.style.top = `${y}px`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+.rectangle{
+  position: absolute;
+  left: 53%;
+  top: 0%;
+  width: 75vw;
+  height: 80vh;
+  z-index: -1;
+  transform: rotate(290deg);
+  background: linear-gradient(90deg, #e11d25, #0000007d);
+ }
+.rectangle_2{
+  position: absolute;
+  width: 100vw;
+  height: 49vh;
+  z-index: 0;
+  background: white;
+  top: 14.6%;
+}
+.rectangle_3{
+  position: absolute;
+  width: 70vw;
+  height: 36vh;
+  left: 22%;
+  z-index: 0;
+  background: white;
+  transform: rotate(110deg);
+
+}
+.rectangle_image{
+  position: absolute;
+  width: 50vw;
+  height: 70vh;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: 0% 75%;
+  z-index:-1;
+  left: 56%;
+}
+.navbar{
+  flex-wrap: nowrap;
+}
+
+.navbar>.container-fluid{
+  justify-content: start;
+}
+
+.container-fluid.menu-toggle{
+  display: none;
+}
+
+.navbar-brand > svg{
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+}
+
+
+@media only screen and (max-width: 481px){
+    .rectangle_image{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: 37% 76%;
+        z-index: -1;
+        left: 0%;
+        opacity: 0.6;
+    }
+    .rectangle{
+      display: none;
+    }
+    .rectangle_2{
+      display: none;
+    }
+    .rectangle_3{
+      display: none;
+    }
+    #overlay{
+      position: absolute;
+      background: black;
+      object-fit: cover;
+      left: 0%;
+      z-index: -1;
+      width: 100vw;
+      height: 100vh;
+    }
+    .row .top-h2, .top-h5{
+      color: white;
+    }
+    .row .top-h2{
+      padding-top: 100%;
+    }
+    .navbar{
+    position: absolute;
+    background: transparent;
+    top: 0%;
+    width: 100vw;
+    z-index: 5;
+    }
+
+    .navbar>.container-fluid{
+      justify-content: end;
+    }
+    .nav-item{
+      display: none;
+    }
+
+    .container-fluid.menu-toggle{
+      display: flex;
+      justify-content: start;
+      position: fixed;
+
+    }
+    #menu-toggle{
+      z-index: 5;
+    }
+    .light{
+      color: #e11d25;
+    }
+    .dark{
+      color: black;
+    }
+    .navbar-brand > svg{
+      width:75px;
+      height: 75px;
+    }
+    .navbar-brand > svg > path:nth-of-type(1){
+      fill: white
+    }
+}
