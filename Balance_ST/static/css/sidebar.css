@@ -16,8 +16,8 @@
 #page-content-wrapper{
   width: 100%;
   position: absolute;
-  padding:15px;
-	transition:all .5s;
+  overflow: hidden;
+  transition:all .5s;
 }
 
 #menu-toggle{
@@ -43,10 +43,6 @@
       padding-left:15%;
     }
 }
-
-
-
-
 
 /* Sidebar styling */
 .sidebar-nav{
