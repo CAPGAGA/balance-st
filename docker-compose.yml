@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - static_volume:/app/Balance_ST/Balance_ST/static
+    networks:
+      - django-network
+    expose:
+      - 8000
+    command: gunicorn Balance_ST.wsgi:application --bind 0.0.0.0:8000
+  nginx:
+    build:
+      context: nginx
+      dockerfile: Dockerfile
+    volumes:
+      - static_volume:/app/Balance_ST/Balance_ST/static
+    ports:
+      - "1337:80"
+    networks:
+      - django-network
+    depends_on:
+      - web
+
+volumes:
+  static_volume:
+networks:
+  django-network:
