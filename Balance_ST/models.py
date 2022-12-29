@@ -27,3 +27,4 @@ class RequestModel(models.Model):
 
     def get_time_of_request(self):
         return self.datefield
+

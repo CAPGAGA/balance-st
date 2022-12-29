@@ -1,14 +1,15 @@
 .rectangle{
+  clip-path: polygon(21% 0, 100% 0, 100% 100%, 0% 100%);
   position: absolute;
-  left: 53%;
+  left: 58%;
   top: 0%;
-  width: 75vw;
-  height: 80vh;
+  width: 100vw;
+  height: 92vh;
   z-index: -1;
-  transform: rotate(290deg);
-  background: linear-gradient(90deg, #e11d25, #0000007d);
+  background: linear-gradient(28deg, #e11d25, #0000007d);
  }
 .rectangle_2{
+  display: none;
   position: absolute;
   width: 100vw;
   height: 49vh;
@@ -17,6 +18,7 @@
   top: 14.6%;
 }
 .rectangle_3{
+  display: none;
   position: absolute;
   width: 70vw;
   height: 36vh;
@@ -27,6 +29,7 @@
 
 }
 .rectangle_image{
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
   position: absolute;
   width: 50vw;
   height: 70vh;
